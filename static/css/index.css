@@ -4,13 +4,15 @@
 
 /*Paleta de Colores*/
 :root {
-    --background-color: #ffffff;
-    --background-navbar-color: #666666;
-    --text-title-color: #444;
-    --text-color: white;
-    --text-secondary-color: #00bcd4;
-    --border-color: #f7f9fa;
+    --color-primario: #00bcd4;
+    --color-neutro-blanco: #ffffff;
+    --color-neutro-oscuro: #666666;
+    --color-neutro-gris-claro: #e5e5e5;
 
+    --color-texto-principal: #444444;
+    --color-texto-claro: white;
+
+    --color-borde-claro: #f7f9fa;
 }
 * {
     margin: 0;
@@ -28,7 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: var(--background-navbar-color);
+    background-color: var(--color-neutro-oscuro);
 }
 li, a, button {
     font-weight: 700;
@@ -38,7 +40,7 @@ li, a, button {
 }
 .btn-contact {
     font-family: "Caveat", cursive;
-    color: var(--text-secondary-color);
+    color: var(--color-primario);
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
@@ -46,7 +48,8 @@ li, a, button {
     background: none;
 }
 .btn-contact:hover {
-    color: var(--text-color);
+    color: var(--color-texto-claro);
+    transform: translateY(-5px);
 }
 .logo {
     cursor: pointer;
@@ -60,10 +63,10 @@ li, a, button {
 }
 .nav-links li a {
     transition: all 0.3s ease 0s;
-    color: var(--text-color);
+    color: var(--color-texto-claro);
 }
 .nav-links li a:hover {
-    color: var(--text-secondary-color);
+    color: var(--color-primario);
 }
 /* Responsive Navbar */
 
@@ -74,7 +77,7 @@ li, a, button {
     justify-content: center;
     align-items: center;
     /*height: calc(100vh - 80px);*/
-    background-color: var(--background-color);
+    background-color: var(--color-neutro-blanco);
     text-align: center;
 }
 .main-content{
@@ -84,26 +87,26 @@ li, a, button {
 .main-title {
     font-size: 5em;
     font-weight: 700;
-    color: var(--text-title-color);
+    color: var(--color-texto-principal);
     margin-bottom: 0.1em;
 }
 .subtitle {
     font-size: 4em;
     font-weight: 700;
-    color: var(--text-secondary-color);
+    color: var(--color-primario);
     margin-top: 0;
     margin-bottom: 0.5em;
 }
 .description {
     font-size: 1.2em;
-    color: var(--text-title-color);
+    color: var(--color-texto-principal);
     margin-bottom: 2em;
     line-height: 1.5;
 }
 .about-us-btn {
     display: inline-block;
-    background-color: var(--text-secondary-color);
-    color: var(--text-color);
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
     text-decoration: none;
     padding: 10px 25px;
     border: 2px solid transparent;
@@ -115,7 +118,69 @@ li, a, button {
     transition: background-color 0.3s;
 }
 .about-us-btn:hover {
-    background-color: var(--background-color);
-    color: var(--text-secondary-color);
-    border: 2px solid var(--text-secondary-color);
+    background-color: var(--color-neutro-blanco);
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
 }
+/* Section: Services */
+.services-section {
+    padding:80px 10%;
+    background-color: var(--color-);
+    text-align: center;
+}
+.services-title {
+    font-size: 2.5em;
+    color: var(--color-texto-principal);
+    margin-bottom: 40px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services-card h4 {
+    font-size: 1.8em;
+    color: var(--color-texto-principal);
+    margin-bottom: 15px;
+}
+.services-card p {
+    font-size: 1em;
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.card-number {
+    color: var(--color-texto-principal);
+}
+.services-card {
+    background-color: var(--color-neutro-gris-claro);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.services-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-primario);
+}
+.services-card:hover .card-number {
+    color: var(--color-texto-claro);
+}
+.services-card:hover h4 {
+    color: var(--color-texto-claro);
+}
+.services-card:hover p {
+    color: var(--color-texto-claro);
+}
+/* Section: Services Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        /* Cambiar a una sola columna */
+        grid-template-columns: 1fr; 
+    }
+}
+
