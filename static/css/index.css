@@ -6,9 +6,9 @@
 :root {
     --background-color: #ffffff;
     --background-navbar-color: #666666;
-    --text-title-color: #333333;
+    --text-title-color: #444;
     --text-color: white;
-    --text-hover-color: #29afd0;
+    --text-secondary-color: #00bcd4;
     --border-color: #f7f9fa;
 
 }
@@ -36,16 +36,16 @@ li, a, button {
     cursor: pointer;
     text-decoration: none; 
 }
-button {
+.btn-contact {
     font-family: "Caveat", cursive;
-    color: var(--text-hover-color);
+    color: var(--text-secondary-color);
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
     font-size: 30px;
     background: none;
 }
-button:hover {
+.btn-contact:hover {
     color: var(--text-color);
 }
 .logo {
@@ -63,5 +63,59 @@ button:hover {
     color: var(--text-color);
 }
 .nav-links li a:hover {
-    color: var(--text-hover-color);
+    color: var(--text-secondary-color);
+}
+/* Responsive Navbar */
+
+/*Section Main-Content */
+.main-section {
+    height: 80vh; /*altura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: calc(100vh - 80px);*/
+    background-color: var(--background-color);
+    text-align: center;
+}
+.main-content{
+    max-width: 800px;
+    padding: 20px;
+}
+.main-title {
+    font-size: 5em;
+    font-weight: 700;
+    color: var(--text-title-color);
+    margin-bottom: 0.1em;
+}
+.subtitle {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--text-secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.description {
+    font-size: 1.2em;
+    color: var(--text-title-color);
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+.about-us-btn {
+    display: inline-block;
+    background-color: var(--text-secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.about-us-btn:hover {
+    background-color: var(--background-color);
+    color: var(--text-secondary-color);
+    border: 2px solid var(--text-secondary-color);
 }
