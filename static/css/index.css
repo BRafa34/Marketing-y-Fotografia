@@ -135,7 +135,7 @@ li, a, button {
     margin-bottom: 2em;
     line-height: 1.5;
 }
-.about-us-btn {
+.about-me-btn {
     display: inline-block;
     background-color: var(--color-primario);
     color: var(--color-lavanda);
@@ -149,7 +149,7 @@ li, a, button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.about-us-btn:hover {
+.about-me-btn:hover {
     background-color: var(--color-lavanda);
     color: var(--color-texto-principal);
     border: 2px solid var(--color-primario);
