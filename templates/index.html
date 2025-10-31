@@ -8,15 +8,15 @@
 </head>
 <body>
     <header class="navbar">
-        <img class="logo" src="" alt="logo">
+        <img class="logo" src="/static/img/logo.png" alt="logo">
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Portafolio</a></li>
+                <li><a href="/templates/index.html">Inicio</a></li>
+                <li><a href="/templates/about_us.html">Sobre Nosotros</a></li>
+                <li><a href="/templates/servicios.html">Servicios</a></li>
             </ul>
         </nav>
-        <a class="contact" href="#"><button class="btn-contact">Contacto</button></a>
+        <a class="contact" href="#footer"><button class="btn-contact">Contacto</button></a>
     </header>
     <section class="main-section">
         <div class="main-content">
@@ -31,28 +31,28 @@
         <div class="services-grid">
             <div class="services-card card-1">
                 <a href="#" class="read-more-link">
-                    <h4>Fotografía</h4>
+                    <h4>Fotografía y Edición</h4>
                     <p>Descripcion...</p>
                     <span class="card-number">1</span>
                 </a>
             </div>
             <div class="services-card card-2">
                 <a href="#" class="read-more-link">
-                    <h4>Servicio 2</h4>
+                    <h4>Asesorias en Marketing</h4>
                     <p>Descripcion...</p>
                     <span class="card-number">2</span>
                 </a>
             </div>
             <div class="services-card card-3">
                 <a href="#" class="read-more-link">
-                    <h4>Servicio 3</h4>
+                    <h4>Creación de contenido</h4>
                     <p>Descripcion...</p>
                     <span class="card-number">3</span>
                 </a>
             </div> 
             <div class="services-card card-4">
                 <a href="#" class="read-more-link">
-                    <h4>Servicio 4</h4>
+                    <h4>Gestión de campañas</h4>
                     <p>Descripcion...</p>
                     <span class="card-number">4</span>
                 </a>
@@ -94,40 +94,41 @@
             <button class="carousel-btn-next">&#10095;</button>
         </div>
     </section>
-    <footer class="main-footer">
+    <footer class="main-footer" id="footer">
         <div class="footer-content">
             <div class="footer-section footer-contact">
                 <h4>Contacto</h4>
-                <p>📧 ejemplo@gmail.com</p>
-                <p>📞 +591 76477433</p>
+                <div class="contact-item"><img src="/static/img/icons/gmail-icon.svg" alt="Gmail">
+                    <p>magicdreams@gmail.com</p></div>
+                <p>📞 +591 60772748</p>
                 <p>📍 Cochabamba, Bolivia</p>
             </div>
         
-        <div class="footer-section footer-navigation">
-            <h4>Navegación</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Portafolio</a></li>
-            </ul>
-        </div>
+            <div class="footer-section footer-navigation">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about_us.html">Sobre Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
         
-        <div class="footer-section footer-social">
-            <h4>Síguenos</h4>
-            <div class="social-links">
-                <a href="#"><img src="ruta/a/icono-instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="ruta/a/icono-linkedin.png" alt="LinkedIn"></a>
+            <div class="footer-section footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-list">
+                    <div class="social-item">
+                        <img src="/static/img/icons/instagram-icon.svg" alt="Instagram">
+                        <p>@magicdreams</p>
+                    </div>
+                    <div class="social-item">
+                        <img src="/static/img/icons/facebook-icon.svg" alt="Facebook">
+                        <p>Magic & Dreams</p>
+                    </div>
                 </div>
             </div>
         </div>
-    
         <div class="footer-bottom">
-            <p>&copy; 2025 Magic & Dreams. Todos los derechos reservados.</p>
-            <div class="legal-links">
-                <a href="#">Aviso Legal</a> | 
-                <a href="#">Política de Privacidad</a>
-            </div>
+            <p>&copy; 2025 Magic & Dreams.</p>
         </div>
     </footer>
     <script src="/static/js/index.js"></script>
