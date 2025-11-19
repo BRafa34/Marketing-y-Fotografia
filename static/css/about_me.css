@@ -34,9 +34,8 @@ html{
     background-color: var(--color-neutro-blanco);/**/
     color: var(--color-texto-secundario);/**/
 }
-/* Navbar Styles */
 header {
-    position: fixed; /* 💡 Navbar flotante sobre el hero */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -44,12 +43,11 @@ header {
     height: 90px;
     overflow: visible;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 15px 10%;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    /*background: linear-gradient(90deg, var(--color-lavanda), var(--color-verde-menta));*/
     box-shadow: 0 2px 4px var(--color-sombra);
 }
 li, a, button {
@@ -58,13 +56,44 @@ li, a, button {
     cursor: pointer;
     text-decoration: none; 
 }
-.logo{
-    height: 70px;
-    width: auto;
-    margin-left: -30px;
-    object-fit: contain;
+.nav-toggle {
+    display: none; 
 }
-.btn-contact {
+.logo-link {
+    display: flex;
+    align-items: center; 
+    text-decoration: none; 
+    margin-left: -20px;
+}
+
+.business-name {
+    font-family: 'Caveat', cursive;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--color-neutro-oscuro);
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.logo-link:hover .business-name {
+    color: var(--color-lavanda);
+}
+.logo{
+    height: 60px;
+    width: auto;
+    margin-left: -80px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+    margin-left: 200px;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li:last-child a {
     font-family: "Caveat", cursive;
     color: var(--color-primario);
     border: none;
@@ -72,20 +101,12 @@ li, a, button {
     transition: all 0.3s ease 0s;
     font-size: 30px;
     background: none;
+    padding: 5px 15px;
+    margin-left: 145px;
 }
-.btn-contact:hover {
+.nav-links li:last-child a:hover {
     color: var(--color-texto-secundario);
     transform: translateY(-5px);
-}
-.logo {
-    cursor: pointer;
-}
-.nav-links {
-    list-style: none;
-}
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
 }
 .nav-links li a {
     transition: all 0.3s ease 0s;
@@ -94,8 +115,6 @@ li, a, button {
 .nav-links li a:hover {
     color: var(--color-neutro-oscuro);
 }
-/* Responsive Navbar */
-
 /* Footer */
 .main-footer {
     background-color: #333333; 
@@ -170,23 +189,6 @@ li, a, button {
     text-align: center;
     font-size: 0.9em;
     padding-top: 10px;
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-section {
-        width: 100%;
-        min-width: auto;
-        margin-bottom: 30px;
-    }
-    .social-links {
-        justify-content: center;
-    }
 }
 /* Section: About me */
 
@@ -323,5 +325,149 @@ li, a, button {
     .services-grid {
         /* Cambiar a una sola columna */
         grid-template-columns: 1fr; 
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%; 
+        height: 70px; 
+    }
+
+    .logo {
+        height: 50px; 
+        margin-left: 20px;
+    }
+
+    .business-name {
+        font-size: 1.5em; 
+    }
+
+    .nav-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        color: var(--color-neutro-oscuro);
+        font-size: 2em;
+        cursor: pointer;
+        z-index: 20;
+        margin-left: 57%;
+
+    }
+    .nav-menu {
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 4px var(--color-sombra);
+        z-index: 15;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-menu.active {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    .nav-links li:last-child a{
+        transition: none;
+        padding: 10px 0px;
+        color: var(--color-texto-secundario);
+        margin: 0;
+    }
+    .nav-links li a {
+        display: block; 
+        padding: 15px 0px;
+        color: var(--color-texto-secundario);
+        background-color: transparent;
+        transition: background-color 0.3s, color 0.3s;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav-links li a:hover,
+    .nav-links li a:active {
+        background-color: var(--color-lavanda); 
+        color: var(--color-neutro-blanco);
+    }
+    .nav-links li:last-child a:hover,
+    .nav-links li:last-child a:active{
+        border-radius: 0;
+        display: block;
+        margin: 0;
+        padding: 10px 0px;
+        transform: translateY(0);
+        color: var(--color-texto-principal);
+    } 
+    /* 2. SECCIÓN PRINCIPAL */
+    .main-title {
+        font-size: 4em; 
+    }
+
+    .subtitle {
+        font-size: 1.5em; 
+    }
+
+    /* 3. SECCIÓN DE SERVICIOS */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* SECCIÓN DE PORTAFOLIO */
+    .carousel-wrapper {
+        padding: 0 20px; 
+    }
+    
+    .carousel-btn-prev {
+        left: 0px; 
+        padding: 5px 10px;
+        font-size: 1.5em;
+    }
+    .carousel-btn-next {
+        right: 0px;
+        padding: 5px 10px;
+        font-size: 1.5em;
+    }
+    
+    .portafolio-item {
+        min-width: 280px; 
+        height: 200px;
+    }
+    /* footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .contact-item,
+    .social-item{
+        justify-content: center;
     }
 }

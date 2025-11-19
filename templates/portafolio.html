@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Magic & Dreams</title>
-    <link rel="stylesheet" href="/static/css/portafolio.css">
-    <link rel="icon" type="image/png" href="/static/img/logo.png">
+    <link rel="stylesheet" href="../static/css/portafolio.css">
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
 </head>
 <body>
     <header class="navbar">
-        <img class="logo" src="/static/img/logo.png" alt="logo">
-        <nav>
+        <a href="../index.html" class="logo-link">
+            <img class="logo" src="../static/img/logo.png" alt="logo">
+            <span class="business-name">Magic & Dreams</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation"> &#9776; </button>
+        
+        <nav class="nav-menu">
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="about_me.html">Más Información</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a class="contact" href="#footer">Contacto</a></li>
             </ul>
         </nav>
-        <a class="contact" href="#footer"><button class="btn-contact">Contacto</button></a>
     </header>
     <section class="portafolio-grid-section">
         <div class="portafolio-grid-container">
             <div class="grid-item">
-                <img src="/static/img/IMG-1.jpg" alt="IMG-1" data-img-src="/static/img/IMG-1.jpg">
+                <img src="../static/img/IMG-1.jpg" alt="IMG-1" data-img-src="../static/img/IMG-1.jpg">
             </div>
             <div class="grid-item">
-                <img src="/static/img/IMG-2.jpg" alt="IMG-2" data-img-src="/static/img/IMG-2.jpg">
-            </div>
-            
-            <div class="grid-item">
-                <img src="/static/img/IMG-3.jpg" alt="IMG-3" data-img-src="/static/img/IMG-3.jpg">
+                <img src="../static/img/IMG-2.jpg" alt="IMG-2" data-img-src="../static/img/IMG-2.jpg">
             </div>
             
             <div class="grid-item">
-                <img src="/static/img/IMG-4.jpg" alt="IMG-4" data-img-src="/static/img/IMG-4.jpg">
+                <img src="../static/img/IMG-3.jpg" alt="IMG-3" data-img-src="../static/img/IMG-3.jpg">
+            </div>
+            
+            <div class="grid-item">
+                <img src="../static/img/IMG-4.jpg" alt="IMG-4" data-img-src="../static/img/IMG-4.jpg">
             </div>
 
             <div class="grid-item">
-                <img src="/static/img/IMG-5.jpg" alt="IMG-5" data-img-src="/static/img/IMG-5.jpg">
+                <img src="../static/img/IMG-5.jpg" alt="IMG-5" data-img-src="../static/img/IMG-5.jpg">
             </div>
 
             <div class="grid-item">
-                <img src="/static/img/IMG-6.jpg" alt="IMG-6" data-img-src="/static/img/IMG-6.jpg">
+                <img src="../static/img/IMG-6.jpg" alt="IMG-6" data-img-src="../static/img/IMG-6.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/IMG-7.jpg" alt="IMG-7" data-img-src="../static/img/IMG-7.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/IMG-8.jpg" alt="IMG-8" data-img-src="../static/img/IMG-8.jpg">
             </div>
         </div>
     </section>
@@ -54,7 +66,7 @@
         <div class="footer-content">
             <div class="footer-section footer-contact">
                 <h4>Contacto</h4>
-                <div class="contact-item"><img src="/static/img/icons/gmail-icon.svg" alt="Gmail">
+                <div class="contact-item"><img src="../static/img/icons/gmail-icon.svg" alt="Gmail">
                 <p>magicdreams@gmail.com</p></div>
                 <p>📞 +591 60772748</p>
                 <p>📍 Cochabamba, Bolivia</p>
@@ -63,7 +75,7 @@
             <div class="footer-section footer-navigation">
                 <h4>Navegación</h4>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="about_me.html">Más Información</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="portafolio.html">Portafolio</a></li>
@@ -74,11 +86,11 @@
                 <h4>Sigueme</h4>
                 <div class="social-list">
                     <div class="social-item">
-                        <img src="/static/img/icons/instagram-icon.svg" alt="Instagram">
-                        <p>@magicdreams</p>
+                        <img src="../static/img/icons/instagram-icon.svg" alt="Instagram">
+                        <p>@magicdreams.mktg</p>
                     </div>
                     <div class="social-item">
-                        <img src="/static/img/icons/facebook-icon.svg" alt="Facebook">
+                        <img src="../static/img/icons/facebook-icon.svg" alt="Facebook">
                         <p>Magic & Dreams</p>
                     </div>
                 </div>
@@ -88,6 +100,6 @@
             <p>&copy; 2025 Magic & Dreams.</p>
         </div>
     </footer>   
-    <script src="/static/js/portafolio.js"></script>
+    <script src="../static/js/portafolio.js"></script>
 </body>
 </html>

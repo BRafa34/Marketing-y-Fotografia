@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Más Información</title>
-    <link rel="stylesheet" href="/static/css/about_me.css">
-    <link rel="icon" type="image/png" href="/static/img/logo.png">
+    <link rel="stylesheet" href="../static/css/about_me.css">
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
 </head>
 <body>
     <header class="navbar">
-        <img class="logo" src="/static/img/logo.png" alt="logo">
-        <nav>
+        <a href="../index.html" class="logo-link">
+            <img class="logo" src="../static/img/logo.png" alt="logo">
+            <span class="business-name">Magic & Dreams</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation"> &#9776; </button>
+        
+        <nav class="nav-menu">
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="about_me.html">Más Información</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a class="contact" href="#footer">Contacto</a></li>
             </ul>
         </nav>
-        <a class="contact" href="#footer"><button class="btn-contact">Contacto</button></a>
     </header>
     <section class="about-me-section">
         <div class="about-me-container">
@@ -27,7 +33,7 @@
 
             <div class="about-me-content">
                 <div class="about-me-text">
-                
+                    
                     <p>En Magic & Dreams creemos en el poder de los sueños y en el<br>
                     potencial de cada emprendimiento. Ayudamos a las marcas a brillar en<br>
                     rede sociales con fotografía profesional, marketing y estrategias<br>
@@ -44,28 +50,28 @@
         <h3 class="services-title">Mis servicios</h3>
         <div class="services-grid">
             <div class="services-card card-1">
-                <a href="/templates/servicios.html?service=foto" class="read-more-link" data-service="foto">
+                <a href="servicios.html?service=foto" class="read-more-link" data-service="foto">
                     <h4>Fotografía y Edición</h4>
                     <p>Capturamos la esencia de tu marca con imágenes profesionales. Creamos el contenido visual que enamora a tu audiencia.</p>
                     <span class="card-number">1</span>
                 </a>
             </div>
             <div class="services-card card-2">
-                <a href="/templates/servicios.html?service=marketing" class="read-more-link" data-service="marketing">
+                <a href="servicios.html?service=marketing" class="read-more-link" data-service="marketing">
                     <h4>Asesorias en Marketing</h4>
                     <p>Te guiamos para crear una estrategia digital sólida. Transformamos tu visión en resultados tangibles y medibles.</p>
                     <span class="card-number">2</span>
                 </a>
             </div>
             <div class="services-card card-3">
-                <a href="/templates/servicios.html?service=vide" class="read-more-link" data-service="video">
+                <a href="servicios.html?service=vide" class="read-more-link" data-service="video">
                     <h4>Creación de contenido</h4>
                     <p>Producción de videos y reels que conectan. Contamos tu historia con un ritmo profesional que genera interacción.</p>
                     <span class="card-number">3</span>
                 </a>
             </div> 
             <div class="services-card card-4">
-                <a href="/templates/servicios.html?service=campaña" class="read-more-link" data-service="campaña">
+                <a href="servicios.html?service=campaña" class="read-more-link" data-service="campaña">
                     <h4>Gestión de campañas</h4>
                     <p>Llevamos tus anuncios a la audiencia correcta. Optimizamos tu inversión para asegurar el máximo retorno.</p>
                     <span class="card-number">4</span>
@@ -73,7 +79,7 @@
             </div>     
         </div>
     </section>
-    <section class="about-me-section">
+    <!--<section class="about-me-section">
         <div class="about-me-container">
             <h1 class="title">Objetivos</h1>
             <div class="about-me-content">
@@ -85,12 +91,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <footer class="main-footer" id="footer">
         <div class="footer-content">
             <div class="footer-section footer-contact">
                 <h4>Contacto</h4>
-                <div class="contact-item"><img src="/static/img/icons/gmail-icon.svg" alt="Gmail">
+                <div class="contact-item"><img src="../static/img/icons/gmail-icon.svg" alt="Gmail">
                     <p>magicdreams@gmail.com</p></div>
                 <p>📞 +591 60772748</p>
                 <p>📍 Cochabamba, Bolivia</p>
@@ -99,7 +105,7 @@
             <div class="footer-section footer-navigation">
                 <h4>Navegación</h4>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="about_me.html">Más Información</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="portafolio.html">Portafolio</a></li>
@@ -110,11 +116,11 @@
                 <h4>Sigueme</h4>
                 <div class="social-list">
                     <div class="social-item">
-                        <img src="/static/img/icons/instagram-icon.svg" alt="Instagram">
-                        <p>@magicdreams</p>
+                        <img src="../static/img/icons/instagram-icon.svg" alt="Instagram">
+                        <p>@magicdreams.mktg</p>
                     </div>
                     <div class="social-item">
-                        <img src="/static/img/icons/facebook-icon.svg" alt="Facebook">
+                        <img src="../static/img/icons/facebook-icon.svg" alt="Facebook">
                         <p>Magic & Dreams</p>
                     </div>
                 </div>
@@ -123,6 +129,7 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Magic & Dreams.</p>
         </div>
-    </footer>   
+    </footer>
+    <script src="../static/js/about_me.js"></script> 
 </body>
 </html>

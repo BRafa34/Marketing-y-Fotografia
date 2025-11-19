@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // FOTOGRAFÍA
         foto: {
             title: "Fotografia & Edición",
-            imageURL: '/static/img/camara.jpg',
+            imageURL: '../static/img/camara.jpg',
             html: `
                 <h2>Captura la Esencia de tu Marca</h2>
                 <p>La fotografía es el alma visual de tu marca. En Magic & Dreams, creamos imágenes profesionales que cuentan tu historia, capturan la esencia de tus productos o servicios, y elevan tu presencia en redes sociales y materiales corporativos.</p>
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // ASESORIAS EN MARKETING
         marketing: {
             title: "Asesorías en Marketing",
-            imageURL: '/static/img/marketing.jpg',
+            imageURL: '../static/img/marketing.jpg',
             html: `
                 <h2>Estrategia Sólida, Resultados Mágicos</h2>
                 <p>¿Tienes un gran producto pero no sabes cómo contarlo? Nuestras asesorías te guían en el complejo mundo digital. Definimos quién es tu público, dónde está, y el mensaje que necesita escuchar para convertirlo en cliente.</p>
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // CREACION DE CONTENIDO
         video: {
             title: "Creación de Contenido",
-            imageURL: '/static/img/video.jpg',
+            imageURL: '../static/img/video.jpg',
             html: `
                 <h2>Videos y Reels que Conectan y Emocionan</h2>
                 <p>El contenido audiovisual es el rey, pero solo si se hace bien. Nuestro servicio se enfoca en crear piezas de video que no solo se vean profesionales, sino que estén diseñadas para generar interacción y alcanzar tus objetivos de negocio.</p>
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // GESTIÓN DE CAMPAÑAS
         campaña: {
             title: "Gestión de Campañas",
-            imageURL: '/static/img/campaña.jpg',
+            imageURL: '../static/img/campaña.jpg',
             html: `
                 <h2>Llega a tu Público sin Desperdiciar Presupuesto</h2>
                 <p>Hacemos que tu inversión publicitaria sea efectiva. Gestionamos tus campañas en plataformas como Facebook/Instagram Ads y Google Ads para que el contenido que creamos llegue exactamente a quienes están listos para comprarte.</p>
@@ -218,5 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => {
         updateCarousel(false);
         startAutoPlay();
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
     });
 });
